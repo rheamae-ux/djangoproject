@@ -1,0 +1,86 @@
+{% extends "myapp/base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="homepage-container">
+    <h1>Welcome to django</h1>
+    <p>
+        Take control of your day, manage your tasks effortlessly, and achieve more 
+        with our intuitive Django To-Do List app.
+    </p>
+    
+    <div class="links">
+        <a class="btn" href="{% url 'todolist' %}">My Tasks</a>
+        <a class="btn" href="{% url 'about' %}">About Us</a>
+        <a class="btn" href="{% url 'contact' %}">Contact</a>
+    </div>
+
+    <div class="documentation">
+        <h2>How to Get Started:</h2>
+        <ol>
+            <li>Sign up or log in with your free account.</li>
+            <li>Create and organize your tasks by priority or deadline.</li>
+            <li>Mark tasks as complete and monitor your progress.</li>
+            <li>Boost your productivity and stay on top of your schedule every day!</li>
+        </ol>
+    </div>
+
+    <div class="extra-features">
+        <h2>Features You'll Love:</h2>
+        <ul>
+            <li>Easy task creation and editing</li>
+            <li>Visual progress tracking</li>
+            <li>Simple, clean interface</li>
+            <li>Works on any device</li>
+        </ul>
+    </div>
+</div>
+
+<style>
+.homepage-container {
+    max-width: 750px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #fefefe;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.links {
+    margin: 25px 0;
+}
+
+.links .btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 20px;
+    margin: 6px;
+    border-radius: 8px;
+    background-color: #1E90FF;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.links .btn:hover {
+    background-color: #1C86EE;
+}
+
+.documentation, .extra-features {
+    text-align: left;
+    margin-top: 35px;
+}
+
+.documentation h2, .extra-features h2 {
+    color: #222;
+    margin-bottom: 12px;
+}
+
+.documentation ol li, .extra-features ul li {
+    margin: 8px 0;
+}
+</style>
+{% endblock %}
